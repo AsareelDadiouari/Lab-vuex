@@ -2,13 +2,13 @@
   <div>
     <hr>
     <div class="menu">
-      <img width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/860/860800.svg" alt="users">
+      <router-link to="contact"><img id="contact" width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/860/860800.svg" alt="users"></router-link>
       <img width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/633/633515.svg" alt="phone">
       <div class="message">
         <p id="number">{{unreadMessages}}</p>
         <img width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/1086/1086560.svg" alt="messages">
       </div>
-      <img width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/633/633611.svg" alt="credit">
+      <router-link to="/"><img id="menu" width="30" height="30" src="https://www.flaticon.com/svg/static/icons/svg/633/633611.svg" alt="credit"></router-link>
     </div>
   </div>
 </template>
@@ -26,10 +26,9 @@ name: "Menu",
 .menu {
   display: flex;
   margin-right: 100px;
-  padding-bottom: 10px;
 }
 
-.menu > img, .message {
+.menu > img, .message, #contact , #menu{
   margin: 0 25px;
 }
 

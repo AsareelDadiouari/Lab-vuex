@@ -1,14 +1,16 @@
-import { createWebHistory, createRouter} from 'vue-router'
+import VueRouter from 'vue-router'
 import MainPanel from "@/components/MainPanel";
-import Contact from "@/components/Contact";
+import Vue from 'vue';
+import ContactPanel from "@/components/ContactPanel";
+Vue.use(VueRouter)
 
 const routes = [
     {path: '/', component: MainPanel},
-    {path: '/Contact', component: Contact}
+    {path: '/contact', component: ContactPanel}
 ]
 
-const router = createRouter({
-    history: createWebHistory(),
+const router = new VueRouter({
+    mode: 'history',
     routes
 })
 

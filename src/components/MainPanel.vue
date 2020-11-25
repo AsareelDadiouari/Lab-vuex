@@ -30,7 +30,7 @@ export default {
 name: "MainPanel",
   components: { MessageView},
   props: {
-    messages: {}
+    //messages: {}
   },
   data: function () {
   return {
@@ -42,6 +42,11 @@ name: "MainPanel",
       this.$store.commit('OPERATE_MESSAGE', index)
     }
   },
+  computed:{
+    messages (){
+      return this.$store.getters.sortMessagesByDate;
+    }
+  }
 
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main">
-      <MainPanel :messages="messages"/>
+      <router-view></router-view>
       <Menu :unread-messages="countUnread" />
     </div>
   </div>
@@ -10,13 +10,11 @@
 <script>
 
 
-import MainPanel from "@/components/MainPanel";
 import Menu from "@/components/Menu";
 export default {
   name: 'App',
   components: {
     Menu,
-    MainPanel
   },
   computed:{
     messages (){
