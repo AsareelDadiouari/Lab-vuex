@@ -1,4 +1,4 @@
-# td1
+# Starting with VUEX
 
 ## Project setup
 ```
